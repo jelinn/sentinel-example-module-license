@@ -23,6 +23,11 @@ check_module_licenses = func(allowed_licenses){
       # Do we need to check these? 
       print("PMR Module", m.source)
       
+    } else if strings.has_prefix(m.source, "https://github") 
+      or strings.has_prefix(m.source, "https://bitbucket") {
+      #Direct reference modules. Are these allowed? Do we need to handle them? 
+
+    
     } else {
       # Public Module Registry Modules- these are the modules we need to check. 
       # Public Registry API URL - https://registry.terraform.io/v1/modules/$m.source
